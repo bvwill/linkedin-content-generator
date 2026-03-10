@@ -95,6 +95,12 @@ These are Claude Code slash commands. Run them in a Claude Code session:
 
 The system handles pillar selection, post type matching, structure, voice compliance, character count targeting, and self-review automatically. You review the draft, give feedback, and iterate until it's right.
 
+## Setting Up Your Voice
+
+Before generating content, you need to build your voice guide. The `voice-guide.md` file is a template with empty sections. The `getting-started.md` walks you through extracting your authentic voice from existing writing or transcripts using Claude Code.
+
+The process: generate baseline content without a voice (so you can see the difference), extract voice patterns from your real writing, review and refine, then plug it into this system. Takes about an hour. See [`getting-started.md`](getting-started.md) for the full walkthrough.
+
 ## What's Inside
 
 ```
@@ -128,13 +134,12 @@ linkedin-content-generator/
 | `comment-reply.md` | Generates comment replies at 500-750 characters. Tags the person by name, pulls a specific quote from their post, adds perspective, closes with one question. No hashtags, no self-promotion. |
 | `examples/` | Three annotated examples showing expected output quality, with coaching notes explaining why each element works. |
 
-## Adapting This for Your Voice
+## Making It Yours
 
-The system is built around one person's voice, but the architecture is reusable. To adapt it:
+Follow the [`getting-started.md`](getting-started.md) guide to extract your voice and fill in the template. Then:
 
-1. **Rewrite `voice-guide.md`** with your own patterns, phrases, words to avoid, and formatting preferences. Be specific. "Professional tone" tells the AI nothing. "Short sentences, no em dashes, contractions are fine, name specific tools" tells it everything.
-2. **Adjust `content-pillars.md`** to your expertise areas and posting cadence.
-3. **Replace the examples** with annotated posts in your voice.
-4. **Update performance data** as you publish and track what works for your audience.
+1. **Adjust `content-pillars.md`** to your expertise areas and posting cadence.
+2. **Replace the examples** with annotated posts in your voice.
+3. **Update performance data** as you publish and track what works for your audience.
 
 The prompts in `prompt.md`, `discovery.md`, and `workshop.md` reference file paths that assume a specific project structure. Update those paths to match your setup.
